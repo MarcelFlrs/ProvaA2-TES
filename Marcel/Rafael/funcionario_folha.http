@@ -21,8 +21,8 @@ POST {{base_url}}/folha/cadastrar
 Content-Type: application/json
 
 {
-    "valor": 50,
-    "quantidade" : 1000,
+    "valor": 25,
+    "quantidade" : 120,
     "mes" : 10,
     "ano" : 2023,
     "funcionarioId" : 1

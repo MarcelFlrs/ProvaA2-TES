@@ -24,6 +24,7 @@ public class Folha
         Ano = ano;
     }
 
+
     public Folha(double salarioBruto, double impostoIrrf, double impostoInss, double impostoFgts, double salarioLiquido)
     {
         folhaId = Guid.NewGuid().ToString();
@@ -35,15 +36,14 @@ public class Folha
     }
 
 
-
-    public double calcularSalarioBruto()
+    public double CalcularSalarioBruto()
     {
 
         salarioBruto = Quantidade * Valor;
         return salarioBruto;
     }
 
-    public double calcularIrff()
+    public double CalcularIrff()
     {
         if (salarioBruto >= 1903.98)
         {
@@ -72,7 +72,7 @@ public class Folha
         return impostoIrrf;
     }
 
-    public double calcularInss()
+    public double CalcularInss()
     {
         if (salarioBruto >= 1693.72)
         {
@@ -97,13 +97,13 @@ public class Folha
         return impostoInss;
     }
 
-    public double calcularFgts()
+    public double CalcularFgts()
     {
         impostoFgts = salarioBruto * (8 / 100);
         return impostoFgts;
     }
 
-    public double calcularSalarioLiquido()
+    public double CalcularSalarioLiquido()
     {
         salarioLiquido = salarioBruto - impostoIrrf - impostoInss;
         return salarioLiquido;
